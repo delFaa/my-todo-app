@@ -42,139 +42,143 @@
 
 
 <!--///////////////// CONTENT ////////////////////  -->
+	<div class="view">
+		<!-- MAINCONTENT TASKLIST -->
+	    <section id="main-container">
+				<!-- Todo -->
+					<ul class="list" id="todo">
+						<!-- List element -->
+						<li class="list-item">
+							<header class="item-header">
+								<h2 class="item-title">
+									<div class="check"></div>
+									<a class="title" href="#" onclick='showhide()'>chercher un aspirateur</a>
+								</h2>
+							</header>
+						</li>
 
-	<!-- MAINCONTENT TASKLIST -->
-    <section id="main-container">
-			<!-- Todo -->
-				<ul class="list" id="todo">
-					<!-- List element -->
-					<li class="list-item">
-						<header class="item-header">
-							<h2 class="item-title">
-								<div class="check"></div>
-								<a class="title" href="#" onclick='showhide()'>chercher un aspirateur</a>
-							</h2>
-						</header>
-					</li>
+						<li class="list-item">
+							<header class="item-header">
+								<h2 class="item-title">
+									<div class="check"></div>
+									<a class="title" href="#" onclick='showhide()'>donner à manger</a>
+								</h2>
 
-					<li class="list-item">
-						<header class="item-header">
-							<h2 class="item-title">
-								<div class="check"></div>
-								<a class="title" href="#" onclick='showhide()'>donner à manger</a>
-							</h2>
+								<ul class="item-menu">
+									<li class="menu-element"><a href="#">delete</a></li>
+									<li class="menu-element"><a href="#">edit</a></li>
+									<li class="menu-element"><a href="#">DONE</a></li>
+								</ul>
+							</header>
 
-							<ul class="item-menu">
-								<li class="menu-element"><a href="#">delete</a></li>
-								<li class="menu-element"><a href="#">edit</a></li>
-								<li class="menu-element"><a href="#">DONE</a></li>
-							</ul>
-						</header>
+							<div class="item-container show">
+								<p class="item-content">item description</p>
+							</div>
 
-						<div class="item-container show">
-							<p class="item-content">item description</p>
-						</div>
+							<footer class="item-footer show">
+								<p>start at <span class="timespan"></span></p>
+								<p>end at <span class="timespan"></span></p>
+							</footer>
+						</li>
 
-						<footer class="item-footer show">
-							<p>start at <span class="timespan"></span></p>
-							<p>end at <span class="timespan"></span></p>
-						</footer>
-					</li>
+						<!-- end list element -->
+					</ul>
+				<!-- END Todo -->
 
-					<!-- end list element -->
-				</ul>
-			<!-- END Todo -->
+				<!-- Done -->
+					<ul class="list" id="done">
+						<!-- List element -->
+						<li class="list-item">
+							<header class="item-header">
+								<h2 class="item-title">
+									<div class="check"></div>
+									<a class="title" href="#">don de sang</a>
+								</h2>
 
-			<!-- Done -->
-				<ul class="list" id="done">
-					<!-- List element -->
-					<li class="list-item">
-						<header class="item-header">
-							<h2 class="item-title">
-								<div class="check"></div>
-								<a class="title" href="#">don de sang</a>
-							</h2>
+								<ul class="item-menu">
+									<li class="menu-element"><a href="#">delete</a></li>
+								</ul>
+							</header>
 
-							<ul class="item-menu">
-								<li class="menu-element"><a href="#">delete</a></li>
-							</ul>
-						</header>
+						</li>
+						<!-- end list element -->
+					</ul>
+				<!-- END DONEELEMENTS -->
 
-					</li>
-					<!-- end list element -->
-				</ul>
-			<!-- END DONEELEMENTS -->
+				<!-- Late -->
+					<ul class="list" id="late">
+						<!-- List element -->
+						<li class="list-item">
+							<header class="item-header">
+								<h2 class="item-title">
+									<div class="check"></div>
+									<a class="title" href="#" >rendez-vous médecin</a>
+								</h2>
 
-			<!-- Late -->
-				<ul class="list" id="late">
-					<!-- List element -->
-					<li class="list-item">
-						<header class="item-header">
-							<h2 class="item-title">
-								<div class="check"></div>
-								<a class="title" href="#" >rendez-vous médecin</a>
-							</h2>
+								<ul class="item-menu">
+									<li class="menu-element"><a href="#">delete</a></li>
+								</ul>
+							</header>
 
-							<ul class="item-menu">
-								<li class="menu-element"><a href="#">delete</a></li>
-							</ul>
-						</header>
+						</li>
+						<!-- end list element -->
+					</ul>
+				<!-- END Late -->
 
-					</li>
-					<!-- end list element -->
-				</ul>
-			<!-- END Late -->
+			<!-- END MainContent -->
+			</section>
+	<!--///////////////// Edit content ////////////////////  -->
+			<!-- Edit content -->
+			<section id="edit-container">
 
-		<!-- END MainContent -->
-		</section>
-<!--///////////////// Edit content ////////////////////  -->
-		<!-- Edit content -->
-		<section id="edit-container">
+				<a class="clear">clear</a>
 
-			<a class="clear">clear</a>
+				<div class="title">
+					<h2>TITLE</h2>
+					<input type="text" name="edit-title" placeholder="...">
+				</div>
 
-			<div class="title">
-				<h2>TITLE</h2>
-				<input type="text" name="edit-title" value="...">
-			</div>
+				<div class="description">
+					<h2>DESCRIPTION</h2>
+					<textarea name="edit-description" placeholder="description" value="..."></textarea>
+				</div>
 
-			<div class="description">
-				<h2>DESCRIPTION</h2>
-				<textarea name="edit-description" placeholder="description" value="..."></textarea>
-			</div>
+				<div class="start">
+					<h2>START AT</h2>
+					<div id="start-picker"></div>
+				</div>
 
-			<div class="start">
-				<h2>START AT</h2>
-				<div id="start-picker"></div>
-			</div>
+				<div class="end">
+					<h2>END AT</h2>
+					<div id="end-picker"></div>
+				</div>
 
-			<div class="end">
-				<h2>END AT</h2>
-				<div id="end-picker"></div>
-			</div>
+				<!--  END edit content-->
+			</section>
+	<!-- END CONTENT -->
 
-			<!--  END edit content-->
-		</section>
-<!-- END CONTENT -->
-
-<!--///////////////// FOOTER ////////////////////  -->
-	<!-- MAINFOOTER -->
-		<footer id="main-footer">
-
-		<!-- END MAINFOOTER -->
-		</footer>
-	<!-- EDIT footer -->
-		<footer id="edit-footer">
-
+	<!--///////////////// FOOTER ////////////////////  -->
+		<!-- MAINFOOTER -->
+			<footer id="main-footer">
+				<a href="#">mainlink</a>
+			<!-- END MAINFOOTER -->
+			</footer>
+		<!-- EDIT footer -->
+			<footer id="edit-footer">
+				<a href="#">editfooter</a>
 		<!-- END EDIT footer -->
-		</div>
+	</footer>
+
+		<!-- END visible div view -->
+	</div>
 <!-- END MAINSITE TODOAPP -->
+
 	</div>
 	<!--///////////////// END APP ////////////////////  -->
 
 	<!-- JAVASCRIPT -->
-	<script type="text/javascript" src="todo.js"></script>
 	<script type="text/javascript" src="style/dist/mtr-datepicker.min.js"></script>
+	<script type="text/javascript" src="todo.js"></script>
 
 
 <!-- END BODY -->
