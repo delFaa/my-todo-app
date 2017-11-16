@@ -6,10 +6,8 @@
 	<title>ToDoList2</title>
 	<link rel="stylesheet" type="text/css" href="style/dist/mtr-datepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="style/dist/mtr-datepicker.default-theme.min.css">
-
-
-	<link rel="stylesheet" href="style/main.css">
-<!-- FONT -->
+	<link rel="stylesheet" href="style.css">
+	<!-- FONT -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
 </head>
@@ -17,25 +15,15 @@
 <body>
 	<!--///////////////// MAIN PAGE ////////////////////  -->
 	<div class="main">
-	<!--///////////////// HEADER ////////////////////  -->
+	<!--///////////////// HEADER    ////////////////////  -->
 
 	<!-- MAIN-HEADER -->
 		<header id="main-header">
-
-			<div class="login">
-				<p id="nickname">Elisa</p>
-				<p id="date">7/11/2017</p>
-				<div class="clear"></div>
-			</div>
-
-			<div class="field">
-				<div class="field-title"><h1>MY TODOLIST</h1> </div>
+				<h1>MY TODOLIST</h1>
 				<button id="goToEdit" type="button" name="button" >
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><g>
 						<path class="filler" d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"/></g></g></svg>
 				</button>
-			</div>
-
 		</header>
 		<!-- END MAIN HEADER -->
 	<!-- EDIT HEADER -->
@@ -124,50 +112,58 @@
 						<!-- end list element -->
 					</ul>
 				<!-- END Late -->
-
+				<!-- MAINFOOTER -->
+					<footer id="main-footer">
+						<ul>
+							<li><a href="#">All Task</a></li>
+							<li><a href="#">Todo Tasks</a></li>
+							<li><a href="#">Done Tasks</a></li>
+						</ul>
+					<!-- END MAINFOOTER -->
+					</footer>
 			<!-- END MainContent -->
 			</section>
 	<!--///////////////// Edit content ////////////////////  -->
 			<!-- Edit content -->
 			<section id="edit-container">
-
+		<form action="core/request.php" method="post">
 				<a class="clear">clear</a>
 
 				<div class="title">
 					<h2>TITLE</h2>
-					<input type="text" name="edit-title" placeholder="...">
+					<input type="text" name="task_title" placeholder="...">
 				</div>
 
 				<div class="description">
 					<h2>DESCRIPTION</h2>
-					<textarea name="edit-description" placeholder="description" value="..."></textarea>
+					<textarea name="task_description" placeholder="description" value="..."></textarea>
 				</div>
 
 				<div class="start">
 					<h2>START AT</h2>
-					<div id="start-picker"></div>
+					<input type="datetime-local" name="task_start_timestamp" value="">
+
+					<!-- <div id="start-picker" name="task_start_timestamp"></div> -->
 				</div>
 
 				<div class="end">
 					<h2>END AT</h2>
-					<div id="end-picker"></div>
+					<input type="datetime-local" name="task_end_timestamp">
+					<!-- <div id="end-picker" name="task_end_timestamp"></div> -->
 				</div>
-
-				<!--  END edit content-->
+				<input type="submit">
+			</form>
+<!--  END edit content-->
+				<!-- EDIT footer -->
+					<footer id="edit-footer">
+						<ul>
+							<li><a href="#">add and create new</a></li>
+							<li><a href="#">add</a></li>
+						</ul>
+				<!-- END EDIT footer -->
+				</footer>
 			</section>
 	<!-- END CONTENT -->
-
-	<!--///////////////// FOOTER ////////////////////  -->
-		<!-- MAINFOOTER -->
-			<footer id="main-footer">
-				<a href="#">mainlink</a>
-			<!-- END MAINFOOTER -->
-			</footer>
-		<!-- EDIT footer -->
-			<footer id="edit-footer">
-				<a href="#">editfooter</a>
-		<!-- END EDIT footer -->
-	</footer>
 
 		<!-- END visible div view -->
 	</div>
@@ -178,7 +174,7 @@
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="style/dist/mtr-datepicker.min.js"></script>
-	<script type="text/javascript" src="todo.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 
 
 <!-- END BODY -->

@@ -3,7 +3,7 @@
 /*/////////////////////////////////*/
 html, body {
   display: block;
-  width: 100%; height: auto;
+  width: 100%; height: 100%;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
 }
@@ -17,6 +17,52 @@ li {
 /*///////////  RESET  /////////////*/
 /*/////////////////////////////////*/
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
 }
@@ -31,31 +77,41 @@ body, input, button {
 }
 a:link    {
   text-decoration:  none;
-  color:            black;
+  color:            grey;
   }
 a:visited {
   text-decoration:  none;
-  color:            black;
+  color:            grey;
   }
 a:hover   {
   text-decoration:  none;
   font-weight:      bold;
-  color:            black;
+  color:            grey;
   cursor:           pointer;
   }
 a:active  {
   text-decoration:  none;
   font-weight:      bold;
-  color:            black;
+  color:            grey;
   }
 
 .main {
-  width: 100%;
-  background-color: #edf0f1;
+  position: absolute;
+  max-width: 500px;
+  min-width: 360px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
   }
 .view{
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  bottom: 0px;
   width: 100%;
-  height: 100%;
   }
 /*/////////////////////////////////*/
 /*///////////  MAIN CONTAINERS ////*/
@@ -63,11 +119,11 @@ a:active  {
 
 
 #main-header {
-  display: block;
+  display: inline-block;
   position: absolute;
+  padding: 50px 5px 5px 5px;
   top: 0; left: 0; right: 0;
   height: 120px;
-  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
 }
 #main-header::after{
   display: inline-block;
@@ -78,9 +134,9 @@ a:active  {
   margin-left: 2%;
 }
 #main-container {
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: 120px; left: 0; bottom: 50px; right: 0;
+  top: 0px; left: 0; bottom: 0; right: 0;
   height: auto;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -88,37 +144,19 @@ a:active  {
   background-color: #fff;
 }
 #main-footer{
-  display: block;
   position: absolute;
   left: 0; bottom: 0; right: 0;
   width: 100%;
   height: 50px;
-  background-color: grey;
 }
 /*/////////////////////////////////*/
 /*///////////  EDIT CONTAINERS ////*/
 /*/////////////////////////////////*/
 
-#edit-header {
-  display: block;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 120px;
-  /*border-bottom: 1px solid grey;*/
-  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
-}
-#edit-header::after{
-  display: inline-block;
-  content: " ";
-  height: 1px;
-  background-color: grey;
-  width: 96%;
-  margin-left: 2%;
-}
 #edit-container {
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: 120px; left: 100%; bottom: 50px;
+  top: 0px; left: 100%; bottom: 0px;
   height: auto;
   padding: 10px 10px 10px 20px;
   overflow: auto;
@@ -134,12 +172,10 @@ a:active  {
 }
 
 #edit-footer{
-  display: block;
   position: absolute;
   left: 0; bottom: 0; right: 0;
   width: 100%;
   height: 50px;
-  background-color: grey;
 }
 
 
@@ -147,64 +183,17 @@ a:active  {
 /*//// GENERAL HEADER  ////////////*/
 /*/////////////////////////////////*/
 
-          /*//////  LOGIN  /////////*/
-
-.login {
-  position: absolute;
-  top: 0;
-  width: 90%; height: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 50px;
-  color: grey;
-}
-
-.login #nickname {
-  float: left;
-  color: grey;
-  text-indent: 5px;
-}
-
-.login #date {
-  float: right;
-  color: grey;
-}
-
-.clear {
-  clear: both;
-}
-
             /*/////  FIELD  /////////*/
-.field {
-  position: relative;
-  width: 100%; height: 100px;
-  top: 50px;
-}
 
-.field-title {
-  position: absolute;
+#main-header h1 {
   float: left;
-  width: 98%;height: 50px;
-  margin-left: 1%;
-  margin-right: 1%;
-  padding: 0 55px 0 0;
-  outline: none;
-  text-decoration: none;
-  text-indent: 15px;
-  text-align: left;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 100 !important;
   color: grey;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
-.field button {
-  position: absolute;
-  float: left;
-  right: 1%;
+#main-header button {
+  float: right;
   width: 50px; height: 50px;
   border-radius: 25px;
   outline: none;
@@ -220,7 +209,7 @@ a:active  {
   appearance: none;
 }
 
-#main-header .field button svg{
+#main-header button svg{
   width: 16px;
   height: 16px;
   position: flex;
@@ -229,10 +218,22 @@ a:active  {
   transform: rotate(0deg);
 }
 
-.field button svg .filler{
+#main-header button svg .filler{
   fill: grey;
 }
+#main-footer ul{
+  display: flex;
+  justify-content: space-around;
+}
 
+#goToEdit{
+    transform: rotate(0deg);
+    transition-duration: 1s;
+}
+#goToMain{
+    transform: rotate(-405deg);
+    transition-duration: 1s;
+}
 /*/////// MAIN CONTENT  ////////////*/
 /*/////////////////////////////////*/
 
@@ -247,7 +248,7 @@ a:active  {
   display: block;
   margin-left: 10px; margin-right: 10px;
   position: relative;
-  border-bottom: solid 1px grey;
+  margin-bottom: 15px;
 }
 .list-item p{
   font-size: 14px;
@@ -318,12 +319,7 @@ background-color: red;
 }
 /*////// MAIN FOOTER  /////////////*/
 /*/////////////////////////////////*/
-.footer1{
-  width: 100%;
-}
-.footer2{
-  width: 100%;
-}
+
 /*/////////////////////////////////*/
 /*////// EDIT CONTENT  ////////////*/
 /*/////////////////////////////////*/
@@ -381,4 +377,8 @@ background-color: red;
   width: 98%; height: 100px;
   border: none;
   padding: 5px;
+}
+#edit-footer ul{
+    display: flex;
+    justify-content: space-around;
 }
