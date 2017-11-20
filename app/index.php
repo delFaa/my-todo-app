@@ -153,7 +153,7 @@
 				</div>
 				<input type="submit">
 			</form>
-<!--  END edit content-->
+		<!--  END edit content-->
 				<!-- EDIT footer -->
 					<footer id="edit-footer">
 						<ul>
