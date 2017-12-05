@@ -2,7 +2,7 @@
 function debug($var){
   echo "<pre>";
   print_r($var);
-  echo "<pre>";
+  echo "</pre>";
 }
 
 function dd($var){
@@ -15,7 +15,5 @@ $dbname="todo_app";
 $dbpass="root";
 $dbuser="root";
 
-define(SITE, $_SERVER["DOCUMENT_ROOT"].'/b_JS/my-todo-app/app/');
-
-define(CONFIG, SITE.'config/');
-define(CORE, SITE.'core/');
+// define(SITE, $_SERVER["DOCUMENT_ROOT"].'/b_JS/my-todo-app/app/');
+// define(CORE, SITE.'core/');
