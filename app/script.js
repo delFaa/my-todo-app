@@ -25,19 +25,25 @@ editContainer.addEventListener('click',
 	}
 )
 
-// create date picker in edit
-var config = {
-	target: 'start-picker'
-};
-var myDatepicker = new MtrDatepicker(config);
+// accordion for different list items:
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-var config = {
-	target: 'end-picker'
-};
-var myDatepicker = new MtrDatepicker(config);
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+			this.querySelector(".item-menu").style.display = "none";
 
-// rotate + to x
+        } else {
+            panel.style.display = "block";
+			this.querySelector(".item-menu").style.display = "flex";
 
+
+        }
+    }
+}
 
 
 // App js
