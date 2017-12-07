@@ -4,6 +4,7 @@ require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'config.php';
 require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'connexion.php';
 
 //  /// get All elements from DB don't need to protect because don't give it parameters which can be modified in inspector
+
 if( isset( $_POST['getAllTask'] ) ){
     $q = "SELECT * FROM task";
     $q = $db->query($q);
@@ -94,7 +95,7 @@ if( isset ($_POST['deleteTask']) ){
     $startt = $_POST['task_start_timestamp'];
     $endt = $_POST['task_end_timestamp'];
 
-    $q = "DELETE task WHERE task_title = :title, task_description = :description, task_start_timestamp = :startt, task_end_timestamp = :endt WHERE task_id=:id";
+    $q = "DELETE WHERE task_id=:id";
     // Prepare statement
     //try catch used to know if there are errors. they wouldn't show if this wasnt used.
 

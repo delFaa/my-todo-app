@@ -1,3 +1,5 @@
+<?php  include "./core/request.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,61 +36,7 @@
 	    <section id="main-container">
 				<!-- Todo -->
 					<ul class="list" id="todo">
-
-						<!-- List element -->
-                        <li class="list-item">
-							<header class="item-header accordion">
-								<h2 class="item-title">
-									<div class="check"></div>
-									<a class="title" href="#">chercher aspirateur</a>
-								</h2>
-
-								<ul class="item-menu ">
-									<li class="menu-element" name"deleteTask" method="post"><a href="#">delete</a></li>
-									<li class="menu-element" name"editTask" method="post"><a href="#">edit</a></li>
-									<li class="menu-element" name"doneTask"><a href="#">DONE</a></li>
-								</ul>
-							</header>
-
-                            <div class="panel">
-    							<div class="item-container">
-    								<p class="item-content">item description</p>
-    							</div>
-
-    							<footer class="item-footer">
-    								<p>start at <span class="timespan"></span></p>
-    								<p>end at <span class="timespan"></span></p>
-    							</footer>
-                            </div>
-						</li>
-
-						<li class="list-item">
-							<header class="item-header accordion">
-								<h2 class="item-title">
-									<div class="check"></div>
-									<a class="title" href="#">donner à manger</a>
-								</h2>
-
-								<ul class="item-menu ">
-									<li class="menu-element"><a href="#">delete</a></li>
-									<li class="menu-element"><a href="#">edit</a></li>
-									<li class="menu-element"><a href="#">DONE</a></li>
-								</ul>
-							</header>
-
-                            <div class="panel">
-    							<div class="item-container">
-    								<p class="item-content">item description</p>
-    							</div>
-
-    							<footer class="item-footer">
-    								<p>start at <span class="timespan"></span></p>
-    								<p>end at <span class="timespan"></span></p>
-    							</footer>
-                            </div>
-						</li>
-
-						<!-- end list element -->
+						<!-- List items inserted by javascript and ajax -->
 					</ul>
 				<!-- END Todo -->
 
@@ -219,8 +167,8 @@
 
 	<!-- JAVASCRIPT -->
 	<script type="text/javascript" src="style/dist/mtr-datepicker.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<script src="ajax.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/anim.js"></script>
 
 
 <!-- END BODY -->
